@@ -20,13 +20,14 @@ function App() {
   ]);
 
   const deleteTodo = (id) => {
-    console.log("Delete: " + id);
+    setTodos(todos.filter(todo => todo.id !== id))
   };
 
   const addTodo = (text) => {
     const id = todos.length + 1;
     const newTodo = { id, text };
-    setTodos([...todos, newTodo]);
+    console.log(newTodo)
+   setTodos([...todos, newTodo]);
   };
 
   return (
