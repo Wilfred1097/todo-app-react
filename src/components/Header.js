@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Header = ({title}) => {
+const Header = ({title, addTodo, showForm}) => {
   return (
     <div className='header'>
         <h3>{title}</h3>
-        <button className='btn' style={{backgroundColor:'red'}}>Add</button>
+        <button className='btn' style={{backgroundColor:'green'}} onClick={addTodo}>{showForm ? 'Close':'Add'}</button>
     </div>
   )
 }
